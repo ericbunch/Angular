@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+</head>
+
+<body>
+    <div>
+        <div>
+            <label>Adjective:</label>
+            <input type="text" ng-model="adjective" placeholder="Enter an adjective here">
+        </div>
+        <div>
+            <label>Noun:</label>
+            <input type="text" ng-model="noun" placeholder="Enter a noun here">
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" ng-model="age" placeholder="Enter your age">
+        </div>
+        <div>
+            <label>Your name:</label>
+            <input type="text" ng-model="yourName" placeholder="What is your name?">
+        </div>
+        <div>
+            <label>Are you a teacher?</label>
+            <input type="text" ng-model="teacher" placeholder="Are you a teacher?">
+        </div>
+
+        <p>I am a
+            <span ng-if="adjective">{{adjective}}</span>
+            <span ng-if="!adjective">___________</span>
+            <span ng-if="noun">{{noun}}.</span>
+            <span ng-if="!noun">___________.</span>
+        </p>
+
+        <p>In 10 years, I will be
+            <span ng-if="age">{{age + 10}}.</span>
+            <span ng-if="!age">___________.</span>
+        </p>
+
+        <p>It is {{teacher.toLowerCase() ==='yes' || yourName.toLowerCae()==='ivan'}} that you are the teacher.</p>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+</body>
+
+</html>
